@@ -1,0 +1,113 @@
+
+<!-- <div class = "helpbutton-container">
+    </div> -->
+
+
+<!DOCTYPE html>
+<html>
+      <script>
+          var isIE = window.navigator.userAgent.indexOf("MSIE") > -1
+        </script>
+  <div>
+  <head>
+      <meta charset="utf-8">
+      <title>Чат-бот DevOps-инструментов</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="./css/botui.min.css" />
+      <link rel="stylesheet" href="./css/botui-theme-default.css" />
+      <link rel="stylesheet" href="./css/outdatedbrowser.css">
+      <link rel="stylesheet" href="./css/all.css">
+      <link rel="stylesheet" href="./css/app.css">
+      <meta name="description" content="Пример окна чат бота.">
+    </head>
+    <!-- <body style="background-color: #3b3d41  !important">  -->
+    <body class="botui-container-full-screen">
+     
+      <!-- ============= Получение username ============= -->
+      <script>
+            username = '{{ username }}';
+            authtoken = '{{ authtoken }}';
+      </script>
+
+      <!-- ============= Outdated Browser ============= -->
+      <div id="outdated"></div>
+      <script src="./libs/outdatedbrowser.js"></script>
+      <script>
+        //event listener form DOM ready
+        function addLoadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = func;
+            } else {
+                window.onload = function() {
+                    if (oldonload) {
+                        oldonload();
+                    }
+                    func();
+                }
+            }
+        }
+        //call function after DOM ready
+        addLoadEvent(function(){
+            outdatedBrowser({
+                bgColor: '#f25648',
+                color: '#ffffff',
+                lowerThan: 'Edge',
+                languagePath: './outdated.html'
+            })
+        });
+    </script>
+    <!-- ============= Outdated Browser ============= -->
+
+
+     <!-- ============= YOUR CONTENT ============= -->
+      <div class="chatbubble">
+        <div class="unexpanded">
+            <div class="title">Chat with Support</div>
+        </div>
+        <div class="expanded chat-window">
+          <div class="login-screen container">
+              <div class="botui-container-parent-father">
+        <div class="botui-container-parent">
+            <div class="botui-app-container" id="delivery-bot">
+                <bot-ui></bot-ui>
+            </div>
+        </div>
+
+    </div>
+          </div>
+        </div>
+    </div>
+
+{#     <div class="botui-container-parent-father">#}
+{#        <div class="botui-container-parent">#}
+{#            <div class="botui-app-container" id="delivery-bot">#}
+{#                <bot-ui></bot-ui>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#    </div>#}
+    <script src="./libs/vue.min.js"></script>
+      <script src="./libs/jquery.js"></script>
+    <script src="./libs/botui.js"></script>
+    <script src="./bot.js"></script>
+    <script src="./libs/app.js"></script>
+
+    
+    <script>
+        function click_form(){
+                    document.getElementsByClassName('actions-restart')[0].click();       
+                    }
+    </script>
+                    <!-- <div class="actions-restart"  onclick="javascript:document.location.reload()">
+                    restart
+                    </div> -->
+
+
+
+    <!-- ============= YOUR CONTENT ============= -->
+
+
+    </body>
+  </div>
+</html>

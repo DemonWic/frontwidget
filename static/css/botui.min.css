@@ -1,0 +1,177 @@
+/*
+ * botui 0.3.8
+ * A JS library to build the UI for your bot
+ * https://botui.org
+ *
+ * Copyright 2019, Moin Uddin
+ * Released under the MIT license.
+*/
+
+a.botui-message-content-link:focus {
+    outline: thin dotted
+}
+
+a.botui-message-content-link:focus:active,
+a.botui-message-content-link:focus:hover {
+    outline: 0
+}
+
+
+form.botui-actions-text {
+    margin: 0
+}
+
+button.botui-actions-buttons-button {
+    border: 0;
+    color: #202020  !important;
+    line-height: 1;
+    cursor: pointer;
+    font-size: 12px;
+    height: auto;
+    max-width: 143px;
+    min-width: 50px;
+    word-wrap: break-word;
+    font-weight: 500;
+    padding: 10px 7px;
+    border-radius: 10px;
+    vertical-align: middle;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.3;
+    /* background: #E1FFC7  !important; */
+    background: #d1c4b6ab  !important;
+    /* border-bottom: 1px solid #6a9244;
+    border-right: 1px solid #6a9244; */
+    /*box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, .25)*/
+}
+
+input.botui-actions-text-input {
+    margin: 0;
+    width: 82%; /* от расползания строки ввода */
+    font-size: 100%;
+    color: #111111;
+    border-radius: 30px;
+    line-height: normal;
+    vertical-align: baseline;
+    text-align: right;
+
+
+}
+
+button.botui-actions-buttons-button::-moz-focus-inner,
+input.botui-actions-text-input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+button.botui-actions-buttons-button {
+    cursor: pointer;
+    -webkit-appearance: button
+}
+
+.botui-app-container {
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    overflow-y: scroll;
+    padding-right: 45px;
+}
+
+.botui-app-container-ex {
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    overflow: hidden;
+}
+
+@media (min-width:100px) {
+    .botui-app-container {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
+.botui-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /*background-color: #2a2f5842*/
+}
+
+.botui-message {
+    margin: 10px 0;
+    min-height: 20px
+}
+
+.botui-message:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+
+
+.botui-message-content.human {
+    float: right
+}
+
+.botui-message-content iframe {
+    width: 100%
+}
+
+.botui-message-content-image {
+    margin: 5px 0;
+    display: block;
+    max-width: 200px;
+    max-height: 200px
+}
+
+.botui-message-content-link {
+    text-decoration: underline
+}
+
+.profil {
+    position: relative;
+    border-radius: 50%
+}
+
+.profil.human {
+    float: right;
+    margin-left: 5px
+}
+
+.profil.agent {
+    float: left;
+    margin-right: 5px
+}
+
+.profil>img {
+    width: 26px;
+    height: 26px;
+    border: 2px solid #e8e8e8
+}
+
+.profil>img.agent {
+    content: url(http://decodemoji.com/img/logos/blue_moji_hat.svg);
+    border-radius: 50%
+}
+
+button.botui-actions-buttons-button {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+button.botui-actions-buttons-button:not(:last-child) {
+    margin-right: 10px
+}
+
+@media (min-width:400px) {
+    .botui-actions-text-submit {
+        display: yes;
+        /* background-image: <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  width="484.5px" height="484.5px" viewBox="0 0 484.5 484.5" style="enable-background:new 0 0 484.5 484.5;" xml:space="preserve"   > <g>     <g id="keyboard-return">                           <polygon points="433.5,114.75 433.5,216.75 96.9,216.75 188.7,124.95 153,89.25 0,242.25 153,395.25 188.7,359.55 96.9,267.75                                           484.5,267.75 484.5,114.75                         "/>         </g> </g> </svg>; */
+    }
+    .actions-restart {
+        display: yes;
+    }
+}
